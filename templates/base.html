@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+
+<style>
+
+/* 
+body: center, standard width, 
+*/
+body {
+  max-width: 960px;
+  margin: auto;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+
+</style>
+ {% block head %}
+ <title>{% block title %}{% endblock %}</title>
+ {% endblock %}
+</head>
+
+<body>
+
+<section class='content'>
+  {% block content %}{% endblock %}
+</section>
+
+</body>

@@ -1,0 +1,32 @@
+<html>
+	<head>
+<style>
+
+/*
+body: center, standard width,
+*/
+body {
+  max-width: 960px;
+  margin: auto;
+}
+
+.grid-container {
+  display: grid;
+}
+
+
+</style>
+
+	</head>
+	<body>
+		<form method="post" action="{{url_for('file_upload')}}" enctype="multipart/form-data">
+			<div class="grid-container">
+				<input type="file" id="file" name="file1">
+				<input type="file" id="file" name="file2">
+			</div>
+			<div>
+				<button>Send files</button>
+			</div>
+		</form>
+	</body>
+</html>

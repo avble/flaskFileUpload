@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table>
+    <tr>
+      <!-- <th> No. </th> -->
+      <th> File</th>
+      <th> Status</th>
+    </tr>
+  {% for file in files %}
+        <tr>
+          <!-- <th> {{no}} </th> -->
+          <th> {{ file['name'] }} </th>
+          <th> 
+            <form action="{{ url_for('file_delete', filename=file['name']) }}">
+             <input type="submit" method=POST value="Delete">   
+            </form>
+          </th>
+        </tr>
+  {% endfor %}
+  </table>
+{% endblock %}
